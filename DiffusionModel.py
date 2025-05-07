@@ -1,28 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # A 1D difusion model
-
-# here we develop a one-dimensional model of diffusion.
-# it assumes a constant diffusivity.
-# it uses a regular grid.
-# it has a step function for an initial condition.
-# it has fixed boundary conditions.
-
-# Here is the diffusion equation:
-
-# $$ \frac{\partial C}{\partial t} = D\frac{\partial^2 C}{\partial x^2} $$
-
-# Here is the discretized version of the diffusion equation we will solve with our model:
-
-# $$ C^{t+1}_x = C^t_x + {D \Delta t \over \Delta x^2} (C^t_{x+1} - 2C^t_x + C^t_{x-1}) $$
-
-# This is the FTCS scheme as described by slingerland and Kump (2011).
-
-# we'll use 2 librarys, numpy (for arrays) and Matplotlib (for plotting), that arent part of the core python distrabution.
-
-# In[ ]:
-
+"""A 1D diffusion model."""
 
 import numpy as np
 import matplotlib.pyplot as plt
